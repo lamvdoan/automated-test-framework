@@ -29,11 +29,11 @@ This test framework can test an API, browsers, mobile.
 7. To make sure Appium loads: appium --session-override (session-override is for if you want to run tests mulitple times.
   There is an appium bug that will return a 500 if you tried to run tests after the first run.)
 
-## Set up Appium Inspector
+## Set up Appium Inspector (to look at mobile elements of the app)
 1. Connect a device to your laptop
-2. Open Appium client
+2. Open Appium client (Download the client here: http://appium.io/)
 3. Click on the Android Button
-4. Set App APK = {APK path of desired device} e.g. /Users/Lam.Doan/Downloads/apk/ankh-release2.1.apk
+4. Set App APK = {APK path of desired device} e.g. /Users/Lam.Doan/Downloads/apk/app_name.apk
 5. Set Device Name to something meaningful (value doesn't matter).
 6. Click on: Launch
 7. Once it starts listening, click on the Magnifying glass
@@ -41,4 +41,4 @@ This test framework can test an API, browsers, mobile.
 
 ## To Run an Appium Test
 1. Run the command: appium --session-override
-2. (Once it starts listening) Run a test: SampleAppiumTest.irtPressButtons
+2. Once it starts listening, a mobile test can be ran
