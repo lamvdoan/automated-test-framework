@@ -1,5 +1,6 @@
 package com.fetchrewards.common.framework;
 
+import com.fetchrewards.common.driver.WebDriverTestBase;
 import org.junit.*;
 import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
@@ -41,6 +42,8 @@ public class TestBase extends AutomationBase {
 
         log.endSuite();
         log.trace("");
+
+        WebDriverTestBase.quitDriver();
     }
 
     @Before

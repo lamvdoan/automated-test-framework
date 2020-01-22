@@ -3,6 +3,7 @@ package com.fetchrewards.common.structure;
 import com.fetchrewards.common.driver.WebDriverTestBase;
 import com.fetchrewards.common.utility.Utils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 
 /**
@@ -67,5 +68,9 @@ public class PageObjectBase extends WebDriverTestBase {
                 }
             }
         }
+    }
+
+    public String getCurrentUrl() {
+        return webDriver.getCurrentUrl();
     }
 }

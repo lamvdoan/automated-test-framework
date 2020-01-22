@@ -8,6 +8,7 @@ public class TestConfiguration {
     private final String logLevel;
     private final Integer webDriverWaitTime;
     private final String appDevice;
+    private final String rewardsServiceUrl;
 
     private TestConfiguration() {
         Properties prop = new Properties();
@@ -24,6 +25,7 @@ public class TestConfiguration {
         this.logLevel = prop.getProperty("logLevel");
         this.webDriverWaitTime = Integer.parseInt(prop.getProperty("webDriverWaitTime"));
         this.appDevice = prop.getProperty("appDevice");
+        this.rewardsServiceUrl = prop.getProperty("rewardsServiceUrl");
     }
 
     private static TestConfiguration instance = null;
@@ -46,5 +48,9 @@ public class TestConfiguration {
 
     public String getAppDevice() {
         return appDevice;
+    }
+
+    public String getRewardsServiceUrl() {
+        return rewardsServiceUrl;
     }
 }

@@ -9,6 +9,7 @@ public class Home extends PageObjectBase{
     public WebControl careersLink = new WebControl(By.linkText("Careers"));
 
     public Home() {
-        setUrl("https://www.fetchrewards.com");
+        String url = "https://www.fetchrewards.com";
+        setUrl(url);
     }
 }

@@ -10,10 +10,10 @@ public class WebDriverTestBase extends TestBase {
     protected static WebDriverWait wait;
     protected static WebDriver webDriver;
 
-    @AfterClass
-    public static void afterClass() {
-        log.endSuite();
-        webDriver.quit();
+    public static void quitDriver() {
+        if (webDriver != null) {
+            webDriver.quit();
+        }
     }
 
     public WebDriverTestBase() {
@@ -23,9 +23,5 @@ public class WebDriverTestBase extends TestBase {
             webDriver = new ChromeDriver();
             wait = new WebDriverWait(webDriver, config.getWebDriverWaitTime());
         }
-    }
-
-    public void closeBrowsers() {
-        webDriver.quit();
     }
 }
